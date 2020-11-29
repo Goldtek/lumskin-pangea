@@ -8,7 +8,7 @@ import './product.css';
 
 
 
-const ProductList = (props) =>{
+const ProductList = () =>{
   const Cart = useSelector((state) => state.Cart);
   const currency = Cart.currency;
 
@@ -32,7 +32,7 @@ query {
           <section>
             <div className="row">
               {data.products.map((item)=> 
-              <Product item={item} />
+              <Product item={item} key={item.id} />
               )}
             </div>
           </section>
