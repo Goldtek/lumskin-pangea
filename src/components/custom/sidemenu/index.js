@@ -21,7 +21,7 @@ const MenuContent = () => {
     const Cart = useSelector((state) => state.Cart);
     const sidebarOpen  = Cart.openCart;
     const items = Cart.cart.items;
-    const totalPrice = Cart.totalPrice;
+    const totalPrice = Cart.cart.totalPrice;
     let currencies = [];
 
 
