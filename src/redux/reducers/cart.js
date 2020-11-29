@@ -1,7 +1,6 @@
-import _ from "lodash";
+
 import {
   UPDATE_CART,
-  ITEM_REMOVED_FROM_CART,
   CLEAR_CART,
   SET_CURRENCY,
   CLOSE_CART,
