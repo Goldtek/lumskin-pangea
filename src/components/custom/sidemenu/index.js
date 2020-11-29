@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -49,7 +49,7 @@ const MenuContent = () => {
                         <div className="col-sm-8"></div>
                         <div className="col-sm-2">
                             <Query query={GET_CURRENCIES}>
-                                {({ loading, error, data }) => {
+                                {({ error, data }) => {
                                     if (error) {
                                         console.log('error', error);
                                     }
@@ -67,17 +67,26 @@ const MenuContent = () => {
                     </div>
                    
                     {items.map((item) => 
-                        <CartItem item={item} />
+                        <CartItem item={item} key={item.id} />
                     )}
                    
     
-                    <div style={{ height: '120px'}}></div>
+                    <div style={{ height: '120px' , backgroundColor: '#E2E6E3'}}></div>
             </div>
             </section>
             <div style={{ position: 'absolute', bottom: 10, width: '90%', marginLeft: '2%' }}>
                 <hr />
                 <div className="subtotal">
-                    Subtotal
+                    <div className="row">
+                        <div className="col-md-6">
+                            Subtotal
+                        </div>
+                        <div className="col-md-2"></div>
+                        <div className="col-md-2">
+                            {Cart.currency} {totalPrice}
+                        </div>
+                    </div>
+                    
                 </div>
                 <button type="button" className="btn btn-light btn-block sub" > MAKE THIS A SUBSCRIPTION </button>
                 <button type="button" className="btn btn-primary btn-block" > PROCEED TO CHECKOUT</button>
