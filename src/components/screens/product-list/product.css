@@ -1,0 +1,10 @@
+.item-image {
+    display: block;
+    width: 155px;
+    height: 155px;
+    margin: 10px auto;
+}
+
+.bg {
+    background-color: #E2E6E3;
+}

@@ -1,0 +1,120 @@
+html { 
+    height: 100% 
+ }
+ body { 
+    margin: 0; 
+    padding: 0; 
+    height: 100% ;
+ }
+ .side-drawer { 
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    z-index: 200;
+    box-shadow: 1px 0px 7px rgba(0,0,0,0.5); 
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+ }
+ .side-drawer.open {
+    transform: translateX(0);
+ }
+
+
+ .cart { 
+     height: 120px;
+     width: 100%;
+     padding: 12px 0 12px 0;
+     position: relative;
+     display: flex;
+     background-color: #fff;
+     margin-top: 20px;
+     
+ }
+
+ .cartimg {
+     width: 50px;
+     height: 50px;
+     display: inline;
+     margin-top: 30px;
+ }
+
+
+    span {cursor:pointer; }
+
+    .number{
+        margin-top:20px;
+    }
+            
+    .minus{
+        width:45px;
+        height:36px;
+        background:#fff;
+        border-radius:4px;
+        padding:4px 5px 4px 5px;
+        border:1px solid #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 18px;
+        border-right:0px;
+    }
+    
+    .plus{
+        width:45px;
+        height:36px;
+        background:#fff;
+        border-radius:4px;
+        padding:4px 5px 4px 5px;
+        border:1px solid #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 18px;
+        border-left:0px;
+    }
+    .cartInput{
+        height:36px;
+        width: 36px; /**100**/
+        text-align: center;
+        font-size: 18px;
+        border-top:1px solid #ddd;
+        border-bottom:1px solid #ddd;
+        border-left:0px;
+        border-right:0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .total-price{
+        margin-top: 60px;
+    }
+
+    .cartContainer {
+        padding: 20px;
+         overflow-y: scroll;
+         height: 900px;
+         min-height: 900px;
+         position: relative;
+    }
+
+    .back {
+        border: 0px;
+    }
+
+    .back > img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .sub {
+        background-color: #fff !important;
+        margin-bottom: 10px !important;
+    }
+
+    .subtotal {
+        margin-bottom: 10px;
+        padding-left: 15px;
+    }
